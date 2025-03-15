@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lector QR Web</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: image();
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .background-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        }
+
+        #scanner-img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin: 10px;
+            font-size: 16px;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 18px;
+            background: #222;
+            padding: 10px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <img id="scanner-img" src="qrcode.png" alt="Scanner QR">
+    <h1>Lector QR</h1>
+    <button class="btn" onclick="startCamera()">📷 Abrir Cámara</button>
+    <button class="btn" onclick="uploadImage()">📂 Cargar Imagen</button>
+    <div id="output">🔍 Escanee un código QR...</div>
+    <video autoplay loop muted playsinline class="background-video">
+        <source src="fondo.mp4" type="video/mp4">
+    </video>
+    
+
+    <script>
+        function startCamera() {
+            alert("Función para abrir la cámara en desarrollo...");
+        }
+        function uploadImage() {
+            alert("Función para cargar imagen en desarrollo...");
+        }
+    </script>
+</body>
+</html>
